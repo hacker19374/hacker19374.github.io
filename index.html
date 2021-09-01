@@ -1,9 +1,116 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>My Portfolio</title>
-</head>
-<body>
-	<h1>My Portfolio</h1>
-	<img src="website.jpeg" style="width:20%;" alt="Website">
-</body>
+<html lang="en-us">
+    <head>
+        <title>My SimplyCoding Website</title>
+        <link type="text/css" rel="stylesheet" href="main.css"/>
+        <script src="script.js"></script>
+        <script>
+            function banner() {
+                var text = confirm("Visit http://simplystem.com?");
+                return text;
+            }
+            function answer() {
+                var radio = document.getElementsByName("trivia");
+                var selection = false;
+                var message = "";
+
+                for (var i = 0; i < radio.length; i++) {
+                    if (radio[i].value == "yes" && radio[i].checked == true) {
+                        selection = true;
+                    }
+                    //end if statement
+                }
+                //end for loop
+
+                if (selection == true) {
+                    message = message + "<b><p style='color:green'>Way to go!</p></b>";
+                } else {
+                    message = message + "<b><p style='color:red'>Try again my friend.</p></b>";
+                }
+                document.getElementById("response").innerHTML = message;
+
+            }
+        </script>
+        <link rel="icon" type="image/ico" href="https://hacker19374.github.io/My-Website/burger/burgerIMG.ico"/>
+    </head>
+    <body id="body">
+        <header id="banner">
+            <ul id="navmenu">
+                <li class="navitem">
+                    <span onclick="onCl(1)">Home</span>
+                </li>
+                <li class="navitem">
+                    <span onclick="onCl(2)">Games</span>
+                </li>
+                <li class="navitem">
+                    <span onclick="onCl(3)">Videos</span>
+                </li>
+            </ul>
+            <a onclick="return banner()" href="http://simplystem.com">
+                <header id="header">STUFF BETWEEN YOUR HEADER TAG </header>
+            </a>
+        </header>
+        <div class="rightside">Right Side HTML5
+            </div>
+        <div class="leftside">Add HTML code you want in the LEFT SIDE of your web page here!
+            </div>
+        <div class="clearfloat"></div>
+        <h1>My SimplyCoding Website</h1>
+        <p class="cool">
+            Hello, if your on this website, thank you for giving me an A+ <span>&#x1F609;</span>
+            . I am experienced in HTML5, CSS3, and JavaScript so all of this is really easy to me. If you want to look at some of my websites, you can:
+        
+        </p>
+        <div class="list">
+            <ul>
+                <li class="li">
+                    <a href="https://hacker19374.github.io/My-Website" target="_blank">My Homepage</a>
+                </li>
+                <li class="li">
+                    <a href="https://hacker19374.github.io/My-Website/burger/1" target="_blank">My First JavaScript Game</a>
+                </li>
+                <li class="li">
+                    <a href="https://hacker19374.github.io/My-Website/burger/2" target="_blank">Sequel to my first JavaScript game</a>
+                </li>
+            </ul>
+        </div>
+        <audio width="400" height="220" controls autoplay>
+            <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">Your browser does not support HTML 5 audio.
+         
+        </audio>
+        <div class="trivia">
+            <h2>Coding Trivia</h2>
+            <p>What does CSS stand for?</p>
+            <form>
+                <div id="response"></div>
+                <input type="radio" name="trivia" value="yes">
+                Cascading Style Sheets<br>
+                <input type="radio" name="trivia" value="no">
+                Creamy Slimy Sandwiches<br>
+                <input type="radio" name="trivia" value="no">
+                Coding Style Script<br>
+                <input type="radio" name="trivia" value="no">
+                Corny Stylish Submarines<br>
+                <input onclick="answer()" type="button" value="Submit" id="button">
+            </form>
+        </div>
+        <a href="https://hacker19374.github.io/My-Website/burger/1/" target="_blank">
+            <img src="https://hacker19374.github.io/My-Website/burger/burgerIMG.ico" style="width:200px;"/>
+        </a>
+        <a href="https://bit.ly/webDesignGame" target="_blank">
+            <img src="https://000548198.codepen.website/css/Images/computer.png" style="width:200px;">
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/RKhO-EhSoQM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+        </a>
+        <hr>
+        <center>
+            <h1>Tyler Benedum</h1>
+            <br>
+            <a href="https://minecraft.net/">My Favorite Website</a>
+        </center>
+        <footer id="footer">
+            This website was made by <span class="name" id="name">Tyler Benedum</span>
+            for my simply coding tutorial.
+        </footer>
+    </body>
+</html>
